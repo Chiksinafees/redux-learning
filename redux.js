@@ -20,5 +20,5 @@ store.subscribe(subscriberFunction);
 store.dispatch({ type: "decrement" }); // dispatch action
 store.dispatch({ type: "decrement" }); // dispatch action
 store.dispatch({ type: "decrement" }); // dispatch action
-store.dispatch({ type: "increment" }); // dispatch action
+store.dispatch({ type: "decrement" }); // dispatch action
 
