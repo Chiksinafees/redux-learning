@@ -1,32 +1,32 @@
-import { createStore } from "redux"
+import { createStore } from "redux";
 
-const reducerFunction=(currState={counter:0},action)=>{
-  if(action.type==="increment") {
+const reducerFunction = (currState = { counter: 0 }, action) => {
+  if (action.type === "increment") {
     return {
-        counter:currState.counter+1
-    }
+      counter: currState.counter + 1,
+    };
   }
-  if(action.type==="INCREMENTBY2") {
+  if (action.type === "incrementby5") {
     return {
-        counter:currState.counter+2
-    }
-  }
-
-  if(action.type==="DECREMENTBY2") {
-    return {
-        counter:currState.counter+2
-    }
+      counter: currState.counter + 5,
+    };
   }
 
-  if(action.type==="decrement") {
+  if (action.type === "decrementby5") {
     return {
-        counter:currState.counter-1
-    }
+      counter: currState.counter - 5,
+    };
   }
 
-  return currState
-}
+  if (action.type === "decrement") {
+    return {
+      counter: currState.counter - 1,
+    };
+  }
 
-const store=redux.createStore(reducerFunction)
+  return currState;
+};
 
-export default store
+const store = createStore(reducerFunction);
+
+export default store;
